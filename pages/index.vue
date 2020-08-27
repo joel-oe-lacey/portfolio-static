@@ -1,23 +1,26 @@
 <template>
-  <div class="about-cont">
-    <div class="parallax-container">
-      <parallax>
-        <img src="https://d2fbv9aul2xr54.cloudfront.net/nyc.jpg" class="background">
-      </parallax>
-    </div>
-    <Landing v-bind="aboutLanding" />
-    <div id="inner-wrapper">
-      <InfoBlock v-bind="personalDesc" />
-      <h2 class="port-header">
-        My Journey
-      </h2>
-      <Carousel width="100%" height="50%">
-        <ExperienceBlock
-          v-for="item in journey"
-          :key="item.title"
-          v-bind="item"
-        />
-      </Carousel>
+  <div class="app">
+    <Nav />
+    <div class="about-cont">
+      <div class="parallax-container">
+        <parallax>
+          <img src="https://d2fbv9aul2xr54.cloudfront.net/nyc.jpg" class="background">
+        </parallax>
+      </div>
+      <Landing v-bind="aboutLanding" />
+      <div id="inner-wrapper">
+        <InfoBlock v-bind="personalDesc" />
+        <h2 class="port-header">
+          My Journey
+        </h2>
+        <Carousel width="100%" height="50%">
+          <ExperienceBlock
+            v-for="item in journey"
+            :key="item.title"
+            v-bind="item"
+          />
+        </Carousel>
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +32,7 @@ import Landing from '../components/Landing.vue'
 import InfoBlock from '../components/InfoBlock.vue'
 import ExperienceBlock from '../components/ExperienceBlock.vue'
 import Carousel from '../components/Carousel.vue'
+import Nav from '../components/Nav.vue'
 
 export default {
   name: 'App',
@@ -37,7 +41,8 @@ export default {
     InfoBlock,
     ExperienceBlock,
     Parallax,
-    Carousel
+    Carousel,
+    Nav
   },
   data () {
     return {
@@ -50,6 +55,18 @@ export default {
 </script>
 
 <style>
+.app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-flow: column;
+  height: 275vh;
+  width: 100%;
+  background-color: #555B6E;
+  color: #E8EBE4;
+  z-index: -1;
+}
 #inner-wrapper {
   display: flex;
   flex-flow: column;
@@ -90,6 +107,9 @@ export default {
 @media (max-width: 850px) {
   #inner-wrapper {
     width: 100%;
+  }
+  .app {
+    height: 340vh;
   }
 }
 </style>
