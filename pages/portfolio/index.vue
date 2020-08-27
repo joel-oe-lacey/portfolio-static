@@ -1,26 +1,29 @@
 <template>
-  <div class="port-wrapper">
-    <div class="parallax-container">
-      <parallax>
-        <img src="https://d2fbv9aul2xr54.cloudfront.net/street.jpg" class="background">
-      </parallax>
+  <div class="app">
+    <Nav />
+    <div class="port-wrapper">
+      <div class="parallax-container">
+        <parallax>
+          <img src="https://d2fbv9aul2xr54.cloudfront.net/street.jpg" class="background">
+        </parallax>
+      </div>
+      <Landing v-bind="portLanding" />
+      <Carousel width="90%" height="40%" :style="{ 'margin-top': '5%' }">
+        <PortfolioBlock
+          v-for="(item, index) in projects"
+          :key="index"
+          v-bind="item"
+        />
+      </Carousel>
+      <footer class="about-site">
+        <h2 class="port-header">
+          About this site
+        </h2>
+        <p>This website was created as an exploration into Vue. It is hosted statically on AWS, images are served via cloudfront. About Page background by Colton Duke on Unsplash. Portfolio Page background by Yassine Khalfalli on Unsplash. Icons made by Freepik from www.flaticon.com.</p>
+        <p>Coming improvements include a cleaner mobile display, closer alignment to the Vue style guide, improved transitions and interactivity, and a section for personal contacts and blog posts.</p>
+        <a id="resume" href="https://joel-oe-lacey-resources.s3.amazonaws.com/resume-joellacey.pdf" class="btn">View My Resume</a>
+      </footer>
     </div>
-    <Landing v-bind="portLanding" />
-    <Carousel width="90%" height="40%" :style="{ 'margin-top': '5%' }">
-      <PortfolioBlock
-        v-for="(item, index) in projects"
-        :key="index"
-        v-bind="item"
-      />
-    </Carousel>
-    <footer class="about-site">
-      <h2 class="port-header">
-        About this site
-      </h2>
-      <p>This website was created as an exploration into Vue. It is hosted statically on AWS, images are served via cloudfront. About Page background by Colton Duke on Unsplash. Portfolio Page background by Yassine Khalfalli on Unsplash. Icons made by Freepik from www.flaticon.com.</p>
-      <p>Coming improvements include a cleaner mobile display, closer alignment to the Vue style guide, improved transitions and interactivity, and a section for personal contacts and blog posts.</p>
-      <a id="resume" href="https://joel-oe-lacey-resources.s3.amazonaws.com/resume-joellacey.pdf" class="btn">View My Resume</a>
-    </footer>
   </div>
 </template>
 
@@ -30,6 +33,7 @@ import { projects, portLanding } from '../../assets/content.js'
 import PortfolioBlock from '../../components/PortfolioBlock.vue'
 import Carousel from '../../components/Carousel.vue'
 import Landing from '../../components/Landing.vue'
+import Nav from '../../components/Nav.vue'
 
 export default {
   name: 'Portfolio',
@@ -37,7 +41,8 @@ export default {
     PortfolioBlock,
     Carousel,
     Parallax,
-    Landing
+    Landing,
+    Nav
   },
   data () {
     return {
@@ -49,6 +54,18 @@ export default {
 </script>
 
 <style>
+.app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-flow: column;
+  height: 275vh;
+  width: 100%;
+  background-color: #555B6E;
+  color: #E8EBE4;
+  z-index: -1;
+}
 .port-wrapper {
   display: flex;
   flex-flow: column;
@@ -78,9 +95,9 @@ export default {
   width: 75%;
   align-self: center;
 }
-/* @media (max-width: 850px) {
-  #nav {
-
+@media (max-width: 850px) {
+  .app {
+    height: 340vh;
   }
-} */
+}
 </style>
