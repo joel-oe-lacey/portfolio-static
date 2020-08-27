@@ -1,97 +1,95 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+  <div class="about-cont">
+    <div class="parallax-container">
+      <parallax>
+        <img src="https://d2fbv9aul2xr54.cloudfront.net/nyc.jpg" class="background">
+      </parallax>
+    </div>
+    <Landing v-bind="aboutLanding" />
+    <div id="inner-wrapper">
+      <InfoBlock v-bind="personalDesc" />
+      <h2 class="port-header">
+        My Journey
+      </h2>
+      <Carousel width="100%" height="50%">
+        <ExperienceBlock
+          v-for="item in journey"
+          :key="item.title"
+          v-bind="item"
+        />
+      </Carousel>
+    </div>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Parallax from 'vue-parallaxy'
+import { journey, aboutLanding, personalDesc } from '../assets/content.js'
+import Landing from '../components/Landing.vue'
+import InfoBlock from '../components/InfoBlock.vue'
+import ExperienceBlock from '../components/ExperienceBlock.vue'
+import Carousel from '../components/Carousel.vue'
 
 export default {
+  name: 'App',
   components: {
-    Logo,
-    VuetifyLogo
+    Landing,
+    InfoBlock,
+    ExperienceBlock,
+    Parallax,
+    Carousel
+  },
+  data () {
+    return {
+      journey,
+      aboutLanding,
+      personalDesc
+    }
   }
 }
 </script>
+
+<style>
+#inner-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  text-align: left;
+  z-index: 1;
+  align-self: center;
+}
+.header {
+  height: 10%;
+  width: 100%;
+  text-align: left;
+  padding: 1%;
+  color: #C4D3E7;
+}
+.background {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(149, 144, 168, 0.6);
+}
+.parallax-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.about-cont {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 850px) {
+  #inner-wrapper {
+    width: 100%;
+  }
+}
+</style>

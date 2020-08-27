@@ -26,10 +26,10 @@
 
 <script>
 import Parallax from 'vue-parallaxy'
-import { projects, portLanding } from '../assets/content.js'
-import PortfolioBlock from '../components/PortfolioBlock.vue'
-import Carousel from '../components/Carousel.vue'
-import Landing from '../components/Landing.vue'
+import { projects, portLanding } from '../../assets/content.js'
+import PortfolioBlock from '../../components/PortfolioBlock.vue'
+import Carousel from '../../components/Carousel.vue'
+import Landing from '../../components/Landing.vue'
 
 export default {
   name: 'Portfolio',
