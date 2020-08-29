@@ -3,9 +3,7 @@
     <Nav />
     <div class="about-cont">
       <div class="parallax-container">
-        <parallax>
-          <img src="https://d2fbv9aul2xr54.cloudfront.net/nyc.jpg" class="background">
-        </parallax>
+        <v-parallax src="https://d2fbv9aul2xr54.cloudfront.net/nyc.jpg" class="background" />
       </div>
       <Landing v-bind="aboutLanding" />
       <div id="inner-wrapper">
@@ -26,7 +24,6 @@
 </template>
 
 <script>
-import Parallax from 'vue-parallaxy'
 import { journey, aboutLanding, personalDesc } from '../assets/content.js'
 import Landing from '../components/Landing.vue'
 import InfoBlock from '../components/InfoBlock.vue'
@@ -40,7 +37,6 @@ export default {
     Landing,
     InfoBlock,
     ExperienceBlock,
-    Parallax,
     Carousel,
     Nav
   },
