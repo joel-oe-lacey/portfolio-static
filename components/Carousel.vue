@@ -4,12 +4,12 @@
       <slot />
     </section>
     <section class="btn-cont-carousel">
-      <button id="btn-carousel" class="btn" @click="changeSlide(-1)">
+      <v-btn id="btn-carousel" rounded class="btn" @click="changeSlide(-1)">
         Back
-      </button>
-      <button id="btn-carousel" class="btn" @click="changeSlide(1)">
+      </v-btn>
+      <v-btn id="btn-carousel" rounded class="btn" @click="changeSlide(1)">
         Forward
-      </button>
+      </v-btn>
     </section>
   </section>
 </template>
