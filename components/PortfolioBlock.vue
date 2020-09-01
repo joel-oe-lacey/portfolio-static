@@ -22,10 +22,14 @@
         </p>
       </section>
       <section v-if="live" class="btn-cont-live">
-        <a :href="live" class="btn">Live Site</a>
+        <v-btn :href="live" class="btn">
+          Live Site
+        </v-btn>
       </section>
       <section class="btn-cont-github">
-        <a :href="github" class="btn">Github</a>
+        <v-btn :href="github" class="btn">
+          Github
+        </v-btn>
       </section>
     </section>
   </section>

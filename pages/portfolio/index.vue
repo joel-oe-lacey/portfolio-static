@@ -19,7 +19,9 @@
         </h2>
         <p>This website was created as an exploration into Vue. It is hosted statically on AWS, images are served via cloudfront. About Page background by Colton Duke on Unsplash. Portfolio Page background by Yassine Khalfalli on Unsplash. Icons made by Freepik from www.flaticon.com.</p>
         <p>Coming improvements include a cleaner mobile display, closer alignment to the Vue style guide, improved transitions and interactivity, and a section for personal contacts and blog posts.</p>
-        <a id="resume" href="https://joel-oe-lacey-resources.s3.amazonaws.com/resume-joellacey.pdf" class="btn">View My Resume</a>
+        <v-btn id="resume" href="https://joel-oe-lacey-resources.s3.amazonaws.com/resume-joellacey.pdf" class="btn">
+          View My Resume
+        </v-btn>
       </footer>
     </div>
   </div>
