@@ -3,7 +3,9 @@
     <Nav />
     <div class="port-wrapper">
       <div class="parallax-container">
-        <v-parallax src="https://d2fbv9aul2xr54.cloudfront.net/street.jpg" class="background" />
+        <parallax>
+          <img src="https://d2fbv9aul2xr54.cloudfront.net/street.jpg" class="background">
+        </parallax>
       </div>
       <Landing v-bind="portLanding" />
       <Carousel width="90%" height="40%" :style="{ 'margin-top': '5%' }">
@@ -28,6 +30,7 @@
 </template>
 
 <script>
+import Parallax from 'vue-parallaxy'
 import { projects, portLanding } from '../../assets/content.js'
 import PortfolioBlock from '../../components/PortfolioBlock.vue'
 import Carousel from '../../components/Carousel.vue'
@@ -39,6 +42,7 @@ export default {
   components: {
     PortfolioBlock,
     Carousel,
+    Parallax,
     Landing,
     Nav
   },
