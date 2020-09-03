@@ -22,12 +22,12 @@
         </p>
       </section>
       <section v-if="live" class="btn-cont-live">
-        <v-btn :href="live" class="btn">
+        <v-btn :href="live" rounded class="btn">
           Live Site
         </v-btn>
       </section>
       <section class="btn-cont-github">
-        <v-btn :href="github" class="btn">
+        <v-btn :href="github" rounded class="btn">
           Github
         </v-btn>
       </section>
@@ -144,10 +144,6 @@ export default {
   color: #82455D;
   font-size: 1.8rem;
   font-weight: bold;
-  border-bottom-right-radius: 5% 30%;
-  border-top-right-radius: 5% 30%;
-  border-bottom-left-radius: 5% 30%;
-  border-top-left-radius: 5% 30%;
 }
 .btn:hover {
   cursor: pointer;
