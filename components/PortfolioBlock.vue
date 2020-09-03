@@ -37,7 +37,7 @@
           Live Site
         </v-btn>
       </section>
-      <section class="btn-cont-github">
+      <section v-if="github" class="btn-cont-github">
         <v-btn :href="github" rounded class="btn">
           Github
         </v-btn>
