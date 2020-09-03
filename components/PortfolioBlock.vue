@@ -6,7 +6,18 @@
         {{ title }}
       </h1>
       <section class="project-img-cont">
-        <img class="project-img" :src="img">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          :poster="img"
+          class="project-img"
+        >
+          <!-- <source :data-src="one-does-not-simply.webm" type="video/webm"> -->
+          <source :src="video" type="video/mp4">
+        </video>
       </section>
       <section class="portfolio-desc">
         <p v-for="(paragraph, index) in desc" :key="index">
@@ -40,7 +51,7 @@ export default {
   name: 'PortfolioBlock',
   components: {
   },
-  props: ['title', 'github', 'live', 'desc', 'stack', 'img']
+  props: ['title', 'github', 'live', 'desc', 'stack', 'img', 'video']
 }
 </script>
 
