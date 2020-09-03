@@ -81,8 +81,8 @@ export const projects = [{
   video: 'https://joel-oe-lacey-resources.s3.amazonaws.com/portrait.mp4'
 }, {
   title: 'Activism Atlas',
-  github: 'https://github.com/joel-oe-lacey/The-American-Portrait',
-  live: 'https://the-american-portrait.herokuapp.com/',
+  github: 'https://github.com/Activism-Atlas/Activism-Atlas',
+  live: '',
   desc: ['Coded as part of a two-day, two-night activism hackathon, Activism Atlas was built at the request of a non-profit who found themselves regularly storing client contact data in less-than-ideal mediums such as Google Sheets. We developed a CRM to store user contact data which can be tagged and filtered by activism campaigns for easy tracking and outreach.', 'I acted as a technical team lead for our team of five, comprised of four Front End developers (myself included) and one Back End developer. As a result, in between coordinating sprints, I jumped in on the Python and Django Back End to assist.', 'The project was not without struggles, a large portion of time ended up sunk into dev-ops with many team members struggling with their local Python and Postgres environment configurations.'],
   stack: ['React (Class-Based)', 'Bootstrap', 'Python', 'Django'],
   img: 'https://joel-oe-lacey-resources.s3.amazonaws.com/activism-atlas.png',
