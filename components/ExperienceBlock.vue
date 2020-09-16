@@ -102,7 +102,10 @@ export default {
     font-size: .8rem;
   }
   .desc {
-    height: 40%;
+    height: 50%;
+  }
+  .highlights {
+    height: 35%;
   }
 }
 </style>

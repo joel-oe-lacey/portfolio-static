@@ -206,5 +206,16 @@ export default {
   .project-img-cont {
     height: 30%;
   }
+  .stack {
+    grid-area: stack;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .stack > p {
+    margin-right: 1rem;
+  }
 }
 </style>

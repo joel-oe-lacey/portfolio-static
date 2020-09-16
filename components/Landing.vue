@@ -39,8 +39,8 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 3%;
-  height: 40%;
+  padding: 5%;
+  height: min-content;
   width: 60%;
   background-color: rgba(149, 144, 168, 0.6);
   border-bottom-right-radius: 5% 10%;
@@ -54,10 +54,10 @@ export default {
 .working-skills {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   font-weight: bold;
   font-size: 1.2rem;
-  height: 50%;
+  height: min-content;
   width: 80%;
 }
 .working-skills > p {
