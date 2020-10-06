@@ -3,9 +3,11 @@
     <Nav />
     <div class="port-wrapper">
       <div class="parallax-container">
-        <parallax>
-          <img src="https://d2fbv9aul2xr54.cloudfront.net/street.jpg" class="background">
-        </parallax>
+        <client-only placeholder="Loading...">
+          <parallax>
+            <img src="https://d2fbv9aul2xr54.cloudfront.net/street.jpg" class="background">
+          </parallax>
+        </client-only>
       </div>
       <Landing v-bind="portLanding" />
       <Carousel width="90%" height="40%" :style="{ 'margin-top': '5%' }">

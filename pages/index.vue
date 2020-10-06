@@ -3,9 +3,11 @@
     <Nav />
     <div class="about-cont">
       <div class="parallax-container">
-        <parallax>
-          <img src="https://d2fbv9aul2xr54.cloudfront.net/nyc.jpg" class="background">
-        </parallax>
+        <client-only placeholder="Loading...">
+          <parallax>
+            <img src="https://d2fbv9aul2xr54.cloudfront.net/nyc.jpg" class="background">
+          </parallax>
+        </client-only>
       </div>
       <Landing v-bind="aboutLanding" />
       <div id="inner-wrapper">
