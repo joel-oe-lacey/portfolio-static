@@ -12,6 +12,7 @@ export const portLanding = {
     'Node.JS',
     'JavaScript',
     'jQuery',
+    'GraphQL',
     'HTML / CSS',
     'LESS / SASS'
   ]
@@ -69,7 +70,7 @@ export const projects = [{
   github: 'https://github.com/joel-oe-lacey/Eisenmann-Translations',
   live: 'https://joel-oe-lacey.github.io/Eisenmann-Translations/',
   desc: ['Lately i\'ve been trying to focus on supportability and extensibility when building out design specs. This site, a contract for a translation service, leads with those considerations. Who would be working with it most day-to-day?', 'I decided to build out a Gatsby site integrating Tina CMS. This created several distinct advantages: the static site generation and utilization of react-helmet allows for strong SEO and performance, site content can easily be modified in Tina CMS, site pages and menus are dynamically generated from Markdown at build time, this in turn allows for easy localization.', 'This is a work in progress, localization is being tested. Tina integration is underway. Live site changes can be viewed at the GH pages location.', 'Company: Eisenmann Translations'],
-  stack: ['Gatsby', 'React', 'Tina CMS', 'Styled Components', 'Material UI'],
+  stack: ['Gatsby', 'React', 'Tina CMS', 'Styled Components', 'GraphQL', 'Material UI'],
   img: 'https://joel-oe-lacey-resources.s3.amazonaws.com/eisenmann-translation.png',
   video: 'https://joel-oe-lacey-resources.s3.amazonaws.com/eisenmann-translation.mp4'
 }, {
