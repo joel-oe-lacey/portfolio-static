@@ -35,6 +35,12 @@ export default {
   scroll-snap-type: x mandatory;
   height: 90%;
   width: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.carousel::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
 .carousel > * {
   flex: 1 0 100%;
