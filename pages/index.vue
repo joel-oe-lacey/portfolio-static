@@ -23,6 +23,9 @@
           />
         </Carousel>
       </div>
+      <v-btn id="resume-front" href="https://joel-oe-lacey-resources.s3.amazonaws.com/resume-joellacey.pdf" rounded class="btn">
+        View My Resume
+      </v-btn>
     </div>
   </div>
 </template>
@@ -105,6 +108,12 @@ export default {
   flex-flow: column;
   align-items: center;
   overflow: hidden;
+}
+#resume-front {
+  height: 3%;
+  width: 80%;
+  margin: 2%;
+  align-self: center;
 }
 @media (max-width: 850px) {
   #inner-wrapper {
