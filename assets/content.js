@@ -66,7 +66,7 @@ export const journey = [{
 }]
 
 export const projects = [{
-  title: 'Eisenmann Translations (WIP)',
+  title: 'Translation Site Rebuild (Contract - WIP)',
   github: 'https://github.com/joel-oe-lacey/Eisenmann-Translations',
   live: 'https://joel-oe-lacey.github.io/Eisenmann-Translations/',
   desc: ['Lately i\'ve been trying to focus on supportability and extensibility when building out design specs. This site, a contract for a translation service, leads with those considerations. Who would be working with it most day-to-day?', 'I decided to build out a Gatsby site integrating Tina CMS. This created several distinct advantages: the static site generation and utilization of react-helmet allows for strong SEO and performance, site content can easily be modified in Tina CMS, site pages and menus are dynamically generated from Markdown at build time, this in turn allows for easy localization.', 'This is a work in progress, localization is being tested. Tina integration is underway. Live site changes can be viewed at the GH pages location.', 'Company: Eisenmann Translations'],
@@ -74,9 +74,9 @@ export const projects = [{
   img: 'https://joel-oe-lacey-resources.s3.amazonaws.com/eisenmann-translation.png',
   video: 'https://joel-oe-lacey-resources.s3.amazonaws.com/eisenmann-translation.mp4'
 }, {
-  title: 'Waterpark Contract',
-  github: '',
-  live: '',
+  title: 'Interactive Park Map (Contract)',
+  github: 'https://github.com/joel-oe-lacey/Interactive-Park-Map',
+  live: 'https://joel-oe-lacey.github.io/Interactive-Park-Map/',
   desc: ['Rich, intuitive interactivity is so ubiquitous with modern web development that it’s often expected right out the box. I took on a contract as part of a dev shop’s larger development effort to create an interactive, responsive site for a waterpark in Europe. I entered with a similar mindset, that given how commonplace richly functional UI components were, the tools to create them must be similarly so.', 'In some ways, that was true. This project utilized Leaflet, Isotope, and Fancybox to create an interactive map where users can click on attraction markers on the map, view tiles of all attractions, filter by attraction type, and view images and video galleries for each ride.', 'While such libraries were readily available, adapting them to fit this exact need proved quite difficult, with lots of debugging and several forays into the source code of Leaflet specifically to try and correctly map a coordinate system over a static image. Beyond this, making that interface backward compatible with older versions of IE also took some careful planning.', 'Company: Lighthouse.gr'],
   stack: ['jQuery', 'JavaScript', 'LESS', 'Leaflet', 'Isotope', 'Fancybox'],
   img: 'https://joel-oe-lacey-resources.s3.amazonaws.com/Waterpark.png',
